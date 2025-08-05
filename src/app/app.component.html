@@ -1,0 +1,14 @@
+<nav>
+  <div class="nav-links">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+  </div>
+
+  <button class="dark-mode-btn" (click)="toggleDarkMode()">Dark Mode</button>
+</nav>
+
+
+<hr />
+
+
+<router-outlet></router-outlet>

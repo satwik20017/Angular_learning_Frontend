@@ -1,0 +1,59 @@
+<div>
+   
+    <h1>Welcome to {{ title }}</h1>
+    <p>Today's date: {{ today }}</p>
+    <img [src]="imageUrl" alt="Angular Logo" width="100">
+
+    <!-- Event Binding -->
+    <p>Clicked {{count}} times</p>
+    <button (click)="increment()">Click Me</button>
+    <!-- Event Binding -->
+
+    <br /><br />
+
+    <!-- Two Way Binding -->
+    <input [(ngModel)]="name" placeholder="Enter your name">
+    <p>Hello, {{name || 'User' }}!</p>
+    <!-- Two Way Binding -->
+
+    <!-- Directives -->
+
+    <button (click)="showDetails = !showDetails">Toggle</button>
+    <div *ngIf='showDetails'>
+        <p>This is conditionally visible.</p>
+    </div>
+
+
+
+    <ul>
+        <li *ngFor="let tech of technologies; let i = index">
+            {{i + 1}}. {{tech}}
+        </li>
+    </ul>
+
+
+    <p [ngClass]="{ 'active': isActive, 'inactive': !isActive}">
+        This text is conditionally styled.
+    </p>
+
+
+    <p [ngStyle]="{ 'font-size': fontSize, 'color': color}">
+        Styled with ngStyle
+    </p>
+
+    <!-- Practice  -->
+    <button (click)="showPara = !showPara">Show/Hide the para</button>
+    <div *ngIf='showPara'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In iure quo et incidunt qui. Provident, saepe
+        voluptatibus a
+        at officia quidem eligendi perferendis deserunt nostrum ipsa dolorum doloremque consequatur? Sunt!
+    </div>
+
+    <ol>
+        <li *ngFor="let lang of languages; let i = index">
+            {{lang}}
+        </li>
+    </ol>
+    <!-- Practice  -->
+    <!-- Directives -->
+</div>

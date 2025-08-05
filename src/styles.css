@@ -1,0 +1,25 @@
+:root {
+  --bg-color: #eae1e1;
+  --text-color: #353333;
+}
+
+.dark-mode {
+  --bg-color: #353333;
+  --text-color: #eae1e1;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+nav, .dark-mode-btn, a, h1, p, div {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+a, button {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* You can add global styles to this file, and also import other style files */

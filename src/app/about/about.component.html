@@ -1,0 +1,60 @@
+<!-- Pipes -->
+<h2>{{name1 | reverse}}</h2>
+<p>Date: {{today | date:'fullDate'}}</p>
+<p>Salary: {{salary | currency:'INR'}}</p>
+<p>Progress: {{completion | percent: '0.2'}}</p>
+<p>User Info: {{users | json}}</p>
+<!-- Pipes -->
+
+<!-- Parent-Child communication -->
+<app-child [message]="parentMessage"></app-child>
+<!-- Parent-Child communication -->
+
+<app-hello-world></app-hello-world>
+
+<app-child (notify)="handleChildMessage($event)"></app-child>
+<p>{{childMessage}}</p>
+
+<div class="form-container">
+  <!-- Template Driven Form -->
+  <form (ngSubmit)="submitForm()" class="custom-form">
+    <h2 class="form-title">Template-Driven Form</h2>
+
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="user.name" name="name" required />
+
+    <label>Email:</label>
+    <input type="text" [(ngModel)]="user.email" name="email" required />
+
+    <div class="button-group">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+  <!-- Reactive Forms -->
+  <form [formGroup]="form" (ngSubmit)="submitForm()" class="custom-form">
+    <h2 class="form-title">Reactive Form</h2>
+
+    <label>Name:</label>
+    <input type="text" formControlName="name" />
+    <div class="error" *ngIf="form.controls['name'].invalid && form.controls['name'].touched">
+      Name is Required.
+    </div>
+
+    <label>Email:</label>
+    <input type="email" formControlName="email" />
+    <div class="error" *ngIf="form.controls['email'].invalid && form.controls['email'].touched">
+      Enter a valid email
+    </div>
+
+    <br/>
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+  </form>
+</div>
+
+
+<!-- Services -->
+<p>Current User: {{ name2 }}</p>
+<button (click)="changeName()">Change Name</button>
+<!-- Services -->

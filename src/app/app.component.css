@@ -1,0 +1,58 @@
+.active {
+  color: green;
+}
+.inactive {
+  color: red;
+}
+
+nav {
+  background-color: #f8f9fa;
+  padding: 12px 24px;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+nav a.active {
+  background-color: #0056b3;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.nav-links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dark-mode-btn {
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  border-radius: 4px;
+}
