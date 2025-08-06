@@ -1,6 +1,28 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* space between boxes */
+  justify-content: flex-start;
+}
+
+.divclass {
+  border: 2px solid #3f51b5;
+  border-radius: 10px;
+  padding: 15px;
+  width: 45%; /* two items per row */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.divclass:hover {
+  transform: scale(1.02);
+}
+
 .active {
   color: green;
 }
+
 .inactive {
   color: red;
 }

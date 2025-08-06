@@ -3,10 +3,6 @@
   --text-color: #353333;
 }
 
-.dark-mode {
-  --bg-color: #353333;
-  --text-color: #eae1e1;
-}
 
 body {
   background-color: var(--bg-color);
@@ -14,9 +10,6 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-nav, .dark-mode-btn, a, h1, p, div {
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
 
 a, button {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;

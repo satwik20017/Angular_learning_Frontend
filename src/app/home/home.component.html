@@ -1,59 +1,66 @@
 <div>
-   
-    <h1>Welcome to {{ title }}</h1>
-    <p>Today's date: {{ today }}</p>
-    <img [src]="imageUrl" alt="Angular Logo" width="100">
 
-    <!-- Event Binding -->
-    <p>Clicked {{count}} times</p>
-    <button (click)="increment()">Click Me</button>
-    <!-- Event Binding -->
+  <h1>Welcome to {{ title }}</h1>
+  <p>Today's date: {{ today }}</p>
+  <img [src]="imageUrl" alt="Angular Logo" width="100">
 
-    <br /><br />
+  <div class="container">
 
-    <!-- Two Way Binding -->
-    <input [(ngModel)]="name" placeholder="Enter your name">
-    <p>Hello, {{name || 'User' }}!</p>
-    <!-- Two Way Binding -->
+    <div class="divclass">
+      <h3>Event Binding</h3><hr />
+      <p>Clicked {{count}} times</p>
+      <button (click)="increment()">Click Me</button>
+    </div>
 
-    <!-- Directives -->
+    <div class="divclass">
+      <h3>Two-way Binding</h3><hr />
+      <input [(ngModel)]="name" placeholder="Enter your name">
+      <p>Hello, {{name || 'User'}}!</p>
+    </div>
 
-    <button (click)="showDetails = !showDetails">Toggle</button>
-    <div *ngIf='showDetails'>
+    <div class="divclass">
+      <h3>*ngIf</h3><hr />
+      <button (click)="showDetails = !showDetails">Toggle</button>
+      <div *ngIf='showDetails'>
         <p>This is conditionally visible.</p>
+      </div>
     </div>
 
-
-
-    <ul>
+    <div class="divclass">
+      <h3>*ngFor</h3><hr />
+      <ul>
         <li *ngFor="let tech of technologies; let i = index">
-            {{i + 1}}. {{tech}}
+          {{i + 1}}. {{tech}}
         </li>
-    </ul>
-
-
-    <p [ngClass]="{ 'active': isActive, 'inactive': !isActive}">
-        This text is conditionally styled.
-    </p>
-
-
-    <p [ngStyle]="{ 'font-size': fontSize, 'color': color}">
-        Styled with ngStyle
-    </p>
-
-    <!-- Practice  -->
-    <button (click)="showPara = !showPara">Show/Hide the para</button>
-    <div *ngIf='showPara'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In iure quo et incidunt qui. Provident, saepe
-        voluptatibus a
-        at officia quidem eligendi perferendis deserunt nostrum ipsa dolorum doloremque consequatur? Sunt!
+      </ul>
     </div>
 
-    <ol>
+    <div class="divclass">
+      <h3>ngClass</h3><hr />
+      <p [ngClass]="{ 'active': isActive, 'inactive': !isActive}">
+        This text is conditionally styled.
+      </p>
+    </div>
+
+    <div class="divclass">
+      <h3>ngStyle</h3><hr />
+      <p [ngStyle]="{ 'font-size': fontSize, 'color': color}">
+        Styled with ngStyle
+      </p>
+    </div>
+
+    <div class="divclass">
+      <h3>Practice</h3><hr />
+      <button (click)="showPara = !showPara">Show/Hide the para</button>
+      <div *ngIf='showPara'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. ...
+      </div>
+      <ol>
         <li *ngFor="let lang of languages; let i = index">
-            {{lang}}
+          {{lang}}
         </li>
-    </ol>
-    <!-- Practice  -->
-    <!-- Directives -->
+      </ol>
+    </div>
+
+  </div>
 </div>
