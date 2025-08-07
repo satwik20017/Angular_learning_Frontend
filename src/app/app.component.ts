@@ -3,6 +3,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +14,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+ constructor(private themeService: ThemeService) {}
 
+  toggleDarkMode(): void {
+    this.themeService.toggleTheme();
+  }
 }

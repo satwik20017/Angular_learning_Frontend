@@ -1,18 +1,67 @@
 :root {
-  --bg-color: #eae1e1;
-  --text-color: #353333;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f1f1f1;
+  --button-bg: #dddddd;
+  --button-text: #000000;
 }
 
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #100202;
+  --card-bg: #1e1e1e;
+  --button-bg: #333333;
+  --button-text: #ffffff;
+}
 
 body {
-  background-color: var(--bg-color);
+  background-color: var(--background-color);
   color: var(--text-color);
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 
 
 a, button {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* You can add global styles to this file, and also import other style files */
+.card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.dark-mode .card,
+.dark-mode .white-box,
+.dark-mode table,
+.dark-mode table th,
+.dark-mode table td,
+.dark-mode input,
+.dark-mode textarea {
+  color: #000 !important;
+  background-color: #fff !important;
+  border-color: #ccc !important;
+}
+
+/* Optional: consistent table appearance */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
