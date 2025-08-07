@@ -3,14 +3,13 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HelloWorldComponent } from '../hello-world/hello-world.component';
 import { ChildComponent } from '../child/child.component';
-import { ReversePipe } from '../reverse.pipe';
+import { ReversePipe, AltCapPipe } from '../reverse.pipe';
 import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-about',
   imports: [FormsModule, CommonModule, HelloWorldComponent, ChildComponent,
-    ReactiveFormsModule, ReversePipe
-  ],
+    ReactiveFormsModule, ReversePipe, AltCapPipe],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
@@ -18,7 +17,7 @@ export class AboutComponent {
   today = new Date();
 
  //Pipes
-  name1 = 'satwik kondapalli';
+  name1 = 'moumitha';
   salary = 50000;
   completion = 3.45321;
   users = { id: 1, role: 'developer' };

@@ -1,8 +1,9 @@
 <div class="responsive-row">
   <!-- Pipes -->
   <div class="divclass">
-    <h3>Pipes</h3><hr />
-    <h2>{{name1 | reverse}}</h2>
+    <h3>Pipes</h3>
+    <hr />
+    <h2>{{name1 | altCap}}</h2>
     <p>Date: {{today | date:'fullDate'}}</p>
     <p>Salary: {{salary | currency:'INR'}}</p>
     <p>Progress: {{completion | percent: '0.2'}}</p>
@@ -11,7 +12,8 @@
 
   <!-- Parent-Child Communication -->
   <div class="divclass">
-    <h3>Parent-child Communication</h3><hr />
+    <h3>Parent-child Communication</h3>
+    <hr />
     <app-child [message]="parentMessage"></app-child>
   </div>
 </div>
@@ -21,7 +23,8 @@
 
 <!-- Child to Parent Communication -->
 <div class="divclass">
-  <h3>Event handler (Child to Parent)</h3><hr />
+  <h3>Event handler (Child to Parent)</h3>
+  <hr />
   <app-child (notify)="handleChildMessage($event)"></app-child>
   <p>{{childMessage}}</p>
 </div>
@@ -60,14 +63,15 @@
       Enter a valid email
     </div>
 
-    <br/>
+    <br />
     <button type="submit" [disabled]="form.invalid">Submit</button>
   </form>
 </div>
 
 <!-- Services Example -->
 <div class="divclass">
-  <h3>Services</h3><hr />
+  <h3>Services</h3>
+  <hr />
   <p>Current User: {{ name2 }}</p>
   <button (click)="changeName()">Change Name</button>
 </div>
