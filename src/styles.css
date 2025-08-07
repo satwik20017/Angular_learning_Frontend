@@ -4,25 +4,29 @@
   --card-bg: #f1f1f1;
   --button-bg: #dddddd;
   --button-text: #000000;
+  --box-bg: #fff;
 }
 
 .dark-mode {
   --background-color: #121212;
-  --text-color: #100202;
+  --text-color: #ffffff;
   --card-bg: #1e1e1e;
   --button-bg: #333333;
   --button-text: #ffffff;
+  --box-bg: #191717;
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.5s ease, color 0.5s ease;
+  
 }
 
 
 
-a, button {
+a,
+button {
   background-color: var(--button-bg);
   color: var(--button-text);
   border: none;
