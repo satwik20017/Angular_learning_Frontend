@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LifecycleParentComponent } from './lifecycle-parent/lifecycle-parent.component';
 import { LifecycleChildComponent } from './lifecycle-child/lifecycle-child.component';
+import { ParentComponent } from './parent/parent.component';
 
 export const routes: Routes = [
     {
@@ -20,5 +21,9 @@ export const routes: Routes = [
     {
         path:'lifecycle_child',
         component:LifecycleChildComponent
+    },
+    {
+        path:'parent',
+        component: ParentComponent
     }
 ];

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ContentChild, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -13,5 +13,15 @@ export class ChildComponent {
 
   sendNotification() {
     this.notify.emit('Child says Hi!');
+  }
+
+  greet() {
+    return `Hello From child `
+  }
+
+  @ContentChild('projectedContent') content!: ElementRef;
+
+  ngAfterContentInit() {
+    console.log('Projected Content:', this.content.nativeElement.innerText);
   }
 }
