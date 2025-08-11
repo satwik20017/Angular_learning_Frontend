@@ -44,15 +44,28 @@ export class HomeComponent {
   //Practice
   //Directives
 
- 
+
   display = true;
   boxColor = 'green'
 
   changeToBlue() {
+    this.display = true;
     this.boxColor = 'blue'
   }
 
-  changeToYellow(){
+  changeToYellow() {
+    this.display = true;
     this.boxColor = 'yellow'
+  }
+
+  toggleColorBox() {
+    this.display = !this.display;
+  }
+
+
+  divcolor = 'red';
+
+  ChangeConditionally(value: any) {
+    this.divcolor = value
   }
 }
