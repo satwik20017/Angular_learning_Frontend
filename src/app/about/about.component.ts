@@ -17,7 +17,7 @@ export class AboutComponent {
   today = new Date();
 
  //Pipes
-  name1 = 'moumitha';
+  name1 = 'satwik kondapalli';
   salary = 50000;
   completion = 3.45321;
   users = { id: 1, role: 'developer' };

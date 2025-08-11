@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { LifecycleParentComponent } from './lifecycle-parent/lifecycle-parent.component';
+import { LifecycleChildComponent } from './lifecycle-child/lifecycle-child.component';
 
 export const routes: Routes = [
     {
@@ -10,5 +12,13 @@ export const routes: Routes = [
     {
         path: 'about',
         component: AboutComponent
+    },
+    {
+        path: 'lifecycle_parent',
+        component: LifecycleParentComponent
+    },
+    {
+        path:'lifecycle_child',
+        component:LifecycleChildComponent
     }
 ];

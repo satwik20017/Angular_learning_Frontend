@@ -2,7 +2,10 @@
   <div class="nav-links">
     <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
     <a routerLink="/about" routerLinkActive="active">About</a>
-    <input type="checkbox" (click)="toggleDarkMode()" style="margin-left: 30.5cm;">Toggle Dark Mode
+    <a routerLink="/lifecycle_parent" routerLinkActive="active">LifeCycle_Parent</a>
+    <a routerLink="/lifecycle_child" routerLinkActive="active">LifeCycle_Child</a>
+    
+    <button type="button" (click)="toggleDarkMode()" class="dark-mode-toggles" style="margin-left: 20cm;margin-right: auto;">Toggle Dark Mode</button>
   </div>
 
 </nav>

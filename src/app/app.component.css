@@ -48,3 +48,28 @@ nav {
   color: inherit;
 }
 
+.dark-mode-toggles {
+  padding: 12px 24px;
+  margin-left: 20cm;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a4a4a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dark-mode-toggles:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+.dark-mode-toggles:active {
+  transform: scale(0.98);
+}

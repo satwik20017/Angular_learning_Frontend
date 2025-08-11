@@ -1,0 +1,6 @@
+<h2>Lifecycle Parent</h2>
+
+<input type="text" [(ngModel)]="username" placeholder="Enter name">
+<button (click)="toggle()">Toggle Child</button>
+
+<app-lifecycle-child *ngIf="showChild" [name]="username"></app-lifecycle-child>
