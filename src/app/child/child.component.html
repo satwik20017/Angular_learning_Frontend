@@ -5,3 +5,15 @@
 <div style="border: 1px solid black; padding: 10px;">
     <ng-content></ng-content>
 </div>
+
+<div class="card">
+  <header>
+    <ng-content select="[card-header]"></ng-content>
+  </header>
+  <main>
+    <ng-content select="[card-body]"></ng-content>
+  </main>
+  <footer>
+    <ng-content select="[card-footer]"></ng-content>
+  </footer>
+</div>
