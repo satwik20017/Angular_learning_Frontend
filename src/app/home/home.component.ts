@@ -68,4 +68,8 @@ export class HomeComponent {
   ChangeConditionally(value: any) {
     this.divcolor = value
   }
+
+  changeCustomColor(event: Event) {
+    this.divcolor = (event.target as HTMLInputElement).value
+  }
 }

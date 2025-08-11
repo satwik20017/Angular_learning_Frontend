@@ -57,12 +57,16 @@
 
 
     <div class="divclass">
-      <h3 style="display: flex; align-items: center; justify-content: space-between;">Switch Case
-        <button (click)="ChangeConditionally('pink')" style="font-size: 10px;"> Pink</button>
-        <button (click)="ChangeConditionally('gold')" style="font-size: 10px;"> Gold</button>
-        <button (click)="ChangeConditionally('lime')" style="font-size: 10px;"> Lime</button>
-        <button (click)="ChangeConditionally('green')" style="font-size: 10px;"> Green</button>
+      <h3 style="display: flex; align-items: center; justify-content: space-between;">
+        Switch Case
+        <div style="display: grid; grid-template-columns: repeat(2, auto); gap: 5px; margin-left: auto;">
+          <button (click)="ChangeConditionally('pink')" style="font-size: 10px;">Pink</button>
+          <button (click)="ChangeConditionally('gold')" style="font-size: 10px;">Gold</button>
+          <button (click)="ChangeConditionally('lime')" style="font-size: 10px;">Lime</button>
+          <button (click)="ChangeConditionally('green')" style="font-size: 10px;">Green</button>
+        </div>
       </h3>
+
       <hr />
       @switch (divcolor) {
       @case ('pink') {
@@ -88,6 +92,8 @@
       }
       }
 
+      <input type="text" placeholder="Color" (input)="changeCustomColor($event)"
+        style="border: 2px solid black; margin-top: 20px;">
     </div>
 
 
