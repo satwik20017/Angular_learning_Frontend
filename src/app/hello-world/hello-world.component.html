@@ -1,1 +1,22 @@
-<p>hello-world works!</p>
+
+
+<h2>ng-template with #loggedInTemplate Example</h2>
+
+<!-- ngIf + else with template reference -->
+<div *ngIf="isLoggedIn; else loggedOutTemplate">
+  <ng-container *ngTemplateOutlet="loggedInTemplate"></ng-container>
+</div>
+
+<!-- Template for logged-in users -->
+<ng-template #loggedInTemplate>
+  <h3>✅ Welcome back, User!</h3>
+  <p>You are logged in.</p>
+  <button (click)="logout()">Logout</button>
+</ng-template>
+
+<!-- Template for logged-out users -->
+<ng-template #loggedOutTemplate>
+  <h3>❌ Please log in</h3>
+  <p>You are not logged in yet.</p>
+  <button (click)="login()">Login</button>
+</ng-template>

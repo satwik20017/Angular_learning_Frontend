@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { LifecycleParentComponent } from './lifecycle-parent/lifecycle-parent.component';
 import { LifecycleChildComponent } from './lifecycle-child/lifecycle-child.component';
 import { ParentComponent } from './parent/parent.component';
+import { HelloWorldComponent } from './hello-world/hello-world.component';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {
         path:'parent',
         component: ParentComponent
+    },
+    {
+        path:'login_out',
+        component: HelloWorldComponent
     }
 ];
