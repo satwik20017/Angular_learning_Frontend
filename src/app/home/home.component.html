@@ -16,7 +16,7 @@
     <div class="divclass">
       <h3>Two-way Binding</h3>
       <hr />
-      <input [(ngModel)]="name" placeholder="Enter your name">
+      <input [(ngModel)]="name" placeholder="Enter your name" style="border: 1.5px solid black;">
       <p>Hello, {{name || 'User'}}!</p>
     </div>
 
@@ -40,8 +40,9 @@
       <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
 
         <div style="display: flex; gap: 10px;">
-          <button (click)="changeToBlue()">BLUE</button>
+          <button (click)="changeToRed()">RED</button>
           <button (click)="changeToYellow()">YELLOW</button>
+          <button (click)="changeToGreen()">GREEN</button>
           <button (click)="toggleColorBox()">{{display?'Hide':'Show'}}</button>
         </div>
 
@@ -85,14 +86,14 @@
         Lime</div>
       }
       @default {
-      <div [style.background-color]="'grey'"
+      <div [style.background-color]="'grey'" (mouseleave)="handleEvent($event)" (mouseenter)="handleEvent($event)" (mouseover)="handleEvent($event)"
         style="display: flex; justify-content: center; align-items: center; height: 100px; width: 100px; border: 1px solid black; border-radius: 50%;">
         Selected color not available</div>
 
       }
       }
 
-      <input type="text" placeholder="Color" (input)="changeCustomColor($event)"
+      <input type="text" placeholder="Color" (blur)="handleEvent($event)"   (focus)="handleEvent($event)" (input)="changeCustomColor($event)"
         style="border: 2px solid black; margin-top: 20px;">
     </div>
 
@@ -103,11 +104,18 @@
     <div class="divclass">
       <h3>*ngFor</h3>
       <hr />
-      <ul>
+      <ol>
         <li *ngFor="let tech of technologies; let i = index">
           {{i + 1}}. {{tech}}
         </li>
-      </ul>
+      </ol>
+      <hr />
+      @for (student of students; track student.name; let i = $index) {
+      <h3>
+        <span>{{i+1}}.</span>
+        <span> {{student.name}} is {{student.age}} old!</span>
+      </h3>
+      }
     </div>
 
     <div class="divclass">

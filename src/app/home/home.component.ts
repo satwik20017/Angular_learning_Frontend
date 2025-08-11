@@ -48,14 +48,19 @@ export class HomeComponent {
   display = true;
   boxColor = 'green'
 
-  changeToBlue() {
+  changeToRed() {
     this.display = true;
-    this.boxColor = 'blue'
+    this.boxColor = 'red'
   }
 
   changeToYellow() {
     this.display = true;
     this.boxColor = 'yellow'
+  }
+
+  changeToGreen() {
+    this.display = true;
+    this.boxColor = 'green'
   }
 
   toggleColorBox() {
@@ -71,5 +76,14 @@ export class HomeComponent {
 
   changeCustomColor(event: Event) {
     this.divcolor = (event.target as HTMLInputElement).value
+  }
+
+  students = [
+    { "name": "Satwik", "age": 24 },
+    { "name": "Sam", "age": 25 }
+  ]
+
+  handleEvent(event: Event) {
+    console.log('Function called -> ',event.type);
   }
 }

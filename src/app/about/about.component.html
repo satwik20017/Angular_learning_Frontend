@@ -19,7 +19,7 @@
 </div>
 
 <!-- Hello World Component -->
-<app-hello-world></app-hello-world>
+<!-- <app-hello-world></app-hello-world> -->
 
 <!-- Child to Parent Communication -->
 <div class="divclass">
@@ -34,6 +34,7 @@
   <!-- Template Driven Form -->
   <form (ngSubmit)="submitForm()" class="custom-form">
     <h2 class="form-title">Template-Driven Form</h2>
+    <hr />
 
     <label>Name:</label>
     <input type="text" [(ngModel)]="user.name" name="name" required />
@@ -50,6 +51,7 @@
   <!-- Reactive Form -->
   <form [formGroup]="form" (ngSubmit)="submitForm()" class="custom-form">
     <h2 class="form-title">Reactive Form</h2>
+    <hr />
 
     <label>Name:</label>
     <input type="text" formControlName="name" />
@@ -65,6 +67,7 @@
 
     <br />
     <button type="submit" [disabled]="form.invalid">Submit</button>
+    <button type="reset" style="margin-left: 10px;">Reset</button>
   </form>
 </div>
 
