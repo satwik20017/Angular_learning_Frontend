@@ -57,21 +57,35 @@
 
 
     <div class="divclass">
-      <h3 style="display: flex; align-items: center; justify-content: space-between;" >Switch Case
-        <button (click)="ChangeConditionally('pink')" style="font-size: 10px;" > Change to pink</button>
+      <h3 style="display: flex; align-items: center; justify-content: space-between;">Switch Case
+        <button (click)="ChangeConditionally('pink')" style="font-size: 10px;"> Pink</button>
+        <button (click)="ChangeConditionally('gold')" style="font-size: 10px;"> Gold</button>
+        <button (click)="ChangeConditionally('lime')" style="font-size: 10px;"> Lime</button>
+        <button (click)="ChangeConditionally('green')" style="font-size: 10px;"> Green</button>
       </h3>
       <hr />
       @switch (divcolor) {
-        @case ('red') {
-          <div [style.background-color]="'red'" style="width: 100px; height: 100px;"></div>
-        }
-        @case ('pink') {
-          <div [style.background-color]="'pink'" style="width: 100px; height: 100px;"></div>
-        }
-        @default {
-          <div [style.background-color]="'grey'" style="width: 100px; height: 100px;"></div>
+      @case ('pink') {
+      <div [style.background-color]="'pink'"
+        style="display: flex; justify-content: center; align-items: center; height: 100px; width: 100px; border: 1px solid black; border-radius: 50%;">
+        Pink</div>
+      }
+      @case ('gold') {
+      <div [style.background-color]="'gold'"
+        style="display: flex; justify-content: center; align-items: center; height: 100px; width: 100px; border: 1px solid black; border-radius: 50%;">
+        Gold</div>
+      }
+      @case ('lime') {
+      <div [style.background-color]="'lime'"
+        style="display: flex; justify-content: center; align-items: center; height: 100px; width: 100px; border: 1px solid black; border-radius: 50%;">
+        Lime</div>
+      }
+      @default {
+      <div [style.background-color]="'grey'"
+        style="display: flex; justify-content: center; align-items: center; height: 100px; width: 100px; border: 1px solid black; border-radius: 50%;">
+        Selected color not available</div>
 
-        }
+      }
       }
 
     </div>
