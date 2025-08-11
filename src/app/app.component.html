@@ -1,14 +1,22 @@
 <nav>
-  <div class="nav-links">
+  <div class="logo">SATWIK</div>
+
+  <!-- Hamburger menu icon -->
+  <div class="menu-icon" (click)="isMenuOpen = !isMenuOpen">
+    &#9776;
+  </div>
+
+  <div class="nav-links" [class.active]="isMenuOpen">
     <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
     <a routerLink="/about" routerLinkActive="active">About</a>
     <a routerLink="/lifecycle_parent" routerLinkActive="active">LifeCycle_Parent</a>
     <a routerLink="/lifecycle_child" routerLinkActive="active">LifeCycle_Child</a>
-    
-    <button type="button" (click)="toggleDarkMode()" class="dark-mode-toggles" style="margin-left: 20cm;margin-right: auto;">Toggle Dark Mode</button>
+    <button type="button" (click)="toggleDarkMode()" class="dark-mode-toggles">
+      Toggle Dark Mode
+    </button>
   </div>
-
 </nav>
+
 
 
 <hr />

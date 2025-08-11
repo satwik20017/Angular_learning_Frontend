@@ -45,4 +45,14 @@ export class HomeComponent {
   //Directives
 
  
+  display = true;
+  boxColor = 'green'
+
+  changeToBlue() {
+    this.boxColor = 'blue'
+  }
+
+  changeToYellow(){
+    this.boxColor = 'yellow'
+  }
 }

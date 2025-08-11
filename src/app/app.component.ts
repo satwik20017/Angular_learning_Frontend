@@ -14,8 +14,9 @@ import { ThemeService } from './theme.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
- constructor(private themeService: ThemeService) {}
+  constructor(private themeService: ThemeService) { }
 
+  isMenuOpen = false;
   toggleDarkMode(): void {
     this.themeService.toggleTheme();
   }

@@ -7,27 +7,50 @@
   <div class="container">
 
     <div class="divclass">
-      <h3>Event Binding</h3><hr />
+      <h3>Event Binding</h3>
+      <hr />
       <p>Clicked {{count}} times</p>
       <button (click)="increment()">Click Me</button>
     </div>
 
     <div class="divclass">
-      <h3>Two-way Binding</h3><hr />
+      <h3>Two-way Binding</h3>
+      <hr />
       <input [(ngModel)]="name" placeholder="Enter your name">
       <p>Hello, {{name || 'User'}}!</p>
     </div>
 
     <div class="divclass">
-      <h3>*ngIf</h3><hr />
-      <button (click)="showDetails = !showDetails">Toggle</button>
+      <h3 style="display: flex; align-items: center; justify-content: space-between;">
+        *ngIf
+        <button (click)="showDetails = !showDetails" style="font-size: 10px;">
+          Toggle
+        </button>
+      </h3>
+
+      <hr />
       <div *ngIf='showDetails'>
         <p>This is conditionally visible.</p>
       </div>
+
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+
+        <div style="display: flex; gap: 10px;">
+          <button (click)="changeToBlue()">BLUE</button>
+          <button (click)="changeToYellow()">YELLOW</button>
+        </div>
+
+        @if (display) {
+        <div [style.background-color]="boxColor" style="height: 100px; width: 100px; border-radius: 50%;">
+        </div>
+        }
+      </div>
+
     </div>
 
     <div class="divclass">
-      <h3>*ngFor</h3><hr />
+      <h3>*ngFor</h3>
+      <hr />
       <ul>
         <li *ngFor="let tech of technologies; let i = index">
           {{i + 1}}. {{tech}}
@@ -36,21 +59,24 @@
     </div>
 
     <div class="divclass">
-      <h3>ngClass</h3><hr />
+      <h3>ngClass</h3>
+      <hr />
       <p [ngClass]="{ 'active': isActive, 'inactive': !isActive}">
         This text is conditionally styled.
       </p>
     </div>
 
     <div class="divclass">
-      <h3>ngStyle</h3><hr />
+      <h3>ngStyle</h3>
+      <hr />
       <p [ngStyle]="{ 'font-size': fontSize, 'color': color}">
         Styled with ngStyle
       </p>
     </div>
 
     <div class="divclass">
-      <h3>Practice</h3><hr />
+      <h3>Practice</h3>
+      <hr />
       <button (click)="showPara = !showPara">Show/Hide the para</button>
       <div *ngIf='showPara'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. ...
